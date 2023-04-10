@@ -43,4 +43,4 @@ jobs:
         if: ${{ steps.build.outputs.publish_dir }}
         with:
           branch: gh-pages
-          folder: ${{ steps.build.outputs.publish_dir }}
+          folder: ./public
