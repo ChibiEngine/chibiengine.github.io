@@ -38,10 +38,11 @@ const PlasmicGatsbyPage = ({ data, location }: PlasmicGatsbyPageProps) => {
       pageQuery={Object.fromEntries(new URLSearchParams(location.search))}
       Head={Helmet}
     >
-      <Helmet>
+      <Helmet htmlAttributes={{lang: 'en'}}>
         {pageMetadata?.title && <title>{pageMetadata.title}</title>}
         {pageMetadata?.title && <meta property="og:title" content={pageMetadata.title} /> }
         {pageMetadata?.description && <meta property="og:description" content={pageMetadata.description} />}
+        {pageMetadata?.description && <meta name="description" content={pageMetadata.description} />}
         {pageMetadata?.openGraphImageUrl && <meta property="og:image" content={pageMetadata.openGraphImageUrl} />}
       </Helmet>
       <PlasmicComponent component={pageMeta.displayName} />
