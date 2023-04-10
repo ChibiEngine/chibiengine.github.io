@@ -17,10 +17,10 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - id: node
-        name: Set up node v16
+        name: Set up node v18
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '18'
       - id: cache
         name: Recover cache
         uses: actions/cache@v2
