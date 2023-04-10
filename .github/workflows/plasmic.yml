@@ -9,6 +9,7 @@ permissions:
 on:
   repository_dispatch:
     types: [plasmic]
+  workflow_dispatch:
 
 jobs:
   job:
