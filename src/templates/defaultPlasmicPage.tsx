@@ -44,6 +44,8 @@ const PlasmicGatsbyPage = ({ data, location }: PlasmicGatsbyPageProps) => {
         {pageMetadata?.description && <meta property="og:description" content={pageMetadata.description} />}
         {pageMetadata?.description && <meta name="description" content={pageMetadata.description} />}
         {pageMetadata?.openGraphImageUrl && <meta property="og:image" content={pageMetadata.openGraphImageUrl} />}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Helmet>
       <PlasmicComponent component={pageMeta.displayName} />
     </PlasmicRootProvider>
