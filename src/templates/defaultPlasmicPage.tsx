@@ -43,6 +43,7 @@ const PlasmicGatsbyPage = ({ data, location }: PlasmicGatsbyPageProps) => {
         {pageMetadata?.title && <meta property="og:title" content={pageMetadata.title} /> }
         {pageMetadata?.description && <meta property="og:description" content={pageMetadata.description} />}
         {pageMetadata?.description && <meta name="description" content={pageMetadata.description} />}
+        <meta name="keywords" content="typescript, game, engine, web, 2d, modern, extensible, oriented object, entity component system, ecs, pixi, pixijs, fast, powerful" />
         {pageMetadata?.openGraphImageUrl && <meta property="og:image" content={pageMetadata.openGraphImageUrl} />}
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
