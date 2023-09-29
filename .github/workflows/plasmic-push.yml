@@ -24,28 +24,21 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
-      - id: node
-        name: Set up node v18
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      - id: cache
-        name: Recover cache
-        uses: actions/cache@v2
-        with:
-          key: lock-${{ hashFiles('package-lock.json', 'yarn.lock') }}
-          path: node_modules
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+      - run: yarn install
       - id: build
         name: Build Plasmic app
-        uses: plasmicapp/plasmic-action@master
-        with:
-          run: build
-          branch: main
-          skip_if_plasmic: true
+        run: yarn build
+      - id: post-build
+        name: Post-build
+        run: yarn post-build
       - id: gh-pages
         name: Publish to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
-        if: ${{ steps.build.outputs.publish_dir }}
         with:
           branch: gh-pages
           folder: ./public
