@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkweb=self.webpackChunkweb||[]).push([[628],{7824:function(e,u,n){n.r(u);u.default=()=>"Not Found"}}]);
-//# sourceMappingURL=component---src-pages-404-ts-39b569ec922bb826141d.js.map
