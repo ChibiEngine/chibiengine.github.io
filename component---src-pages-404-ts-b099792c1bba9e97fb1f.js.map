@@ -1,1 +1,0 @@
-{"version":3,"file":"component---src-pages-404-ts-b099792c1bba9e97fb1f.js","mappings":"sGAGA,UAHiBA,IACR,W","sources":["webpack://web/./src/pages/404.ts"],"sourcesContent":["const NotFound = () => {\n  return \"Not Found\";\n};\nexport default NotFound;"],"names":["NotFound"],"sourceRoot":""}
