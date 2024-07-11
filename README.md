@@ -1,25 +1,41 @@
-This is a Gatsby project bootstrapped with [`create-plasmic-app`](https://www.npmjs.com/package/create-plasmic-app).
+# Website
 
-## Getting Started
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-First, run the development server:
+### Installation
 
-```bash
-npm run develop
+```
+$ yarn
 ```
 
-Open your browser to see the result.
+### Local Development
 
-You can start editing your project in Plasmic Studio. The page auto-updates as you edit the project.
+```
+$ yarn start
+```
 
-## Learn More
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-With Plasmic, you can enable non-developers on your team to publish pages and content into your website or app.
+### Build
 
-To learn more about Plasmic, take a look at the following resources:
+```
+$ yarn build
+```
 
-- [Plasmic Website](https://www.plasmic.app/)
-- [Plasmic Documentation](https://docs.plasmic.app/learn/)
-- [Plasmic Slack Community](https://www.plasmic.app/slack)
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-You can check out [the Plasmic GitHub repository](https://github.com/plasmicapp/plasmic) - your feedback and contributions are welcome!
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

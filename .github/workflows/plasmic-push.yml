@@ -1,4 +1,4 @@
-name: Build and deploy Plasmic app
+name: Build and deploy
 
 on:
   push:
@@ -31,14 +31,11 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - id: build
-        name: Build Plasmic app
+        name: Build website
         run: yarn build
-      - id: post-build
-        name: Post-build
-        run: yarn post-build
       - id: gh-pages
         name: Publish to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: ./public
+          folder: ./build
