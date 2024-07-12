@@ -111,7 +111,7 @@ function Feature({title, image, description, wip}: FeatureItem) {
           <img src={image} className="w-full h-full object-contain" role="img"/>
         </div>
         <div className="text-center">
-          <p className="text-[30px] font-bold text-[#2196f3]">{title}</p>
+          <p className="mb-0 text-[30px] font-bold text-[#2196f3]">{title}</p>
           <p className="font-medium">{description}</p>
         </div>
       </div>
@@ -120,7 +120,7 @@ function Feature({title, image, description, wip}: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-      <section className="px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[1300px] m-auto">
+      <section className="px-8 pb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[1300px] m-auto bg-white">
         {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
         ))}

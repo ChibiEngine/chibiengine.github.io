@@ -7,11 +7,11 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
       <header className="text-center py-8">
-        <div className=" flex flex-col gap-2">
-          <h1 className="text-white font-['Baloo_2'] text-[72px] font-black drop-shadow-md">
+        <div className="flex flex-col">
+          <h1 className="text-white font-['Baloo_2'] md:text-[72px] text-[60px] font-black drop-shadow-md">
             {siteConfig.title}
           </h1>
-          <p className="text-white text-2xl">{siteConfig.tagline}</p>
+          <p className="px-2 text-white text-xl md:text-2xl">{siteConfig.tagline}</p>
           <div className="mt-4">
             <Link
                 className="button button--secondary button--lg"
@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
             description="Description will go into a meta tag in <head />">
           <div style={{background: "linear-gradient(0deg,#3586FF 0%,#68A4FF 100%) 0% 0% / 100% 100% repeat"}}>
             <HomepageHeader/>
-            <main className="overflow-hidden flex flex-col pb-8">
+            <main className="overflow-hidden flex flex-col">
               <div className="w-[3800px] h-24 self-center relative" style={{color: "var(--ifm-background-surface-color)"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 2730 1021" height="1em" width="1em"
                      className="absolute top-[-25px] block min-w-full w-auto object-cover h-[1546px]" role="img">
