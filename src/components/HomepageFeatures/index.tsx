@@ -108,7 +108,7 @@ function Feature({title, image, description, wip}: FeatureItem) {
       <div className="relative">
         {wip && <p className="absolute top-0 right-0 text-[32px]">🚧</p>}
         <div className="flex items-center justify-center h-20">
-          <img src={image} className="w-full h-full object-contain" role="img"/>
+          <img src={image} alt={title + " icon"} className="w-full h-full object-contain" role="img"/>
         </div>
         <div className="text-center">
           <p className="mb-0 text-[30px] font-bold text-[#2196f3]">{title}</p>
